@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf8">
+	<title>AJAX</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="script.js"></script>
+	<script>	
+		$(document).ready(function(){
+			FillManufSelect();
+		
+			$("#data-button").click(function(){
+				//var div = $("#display-data");
+				//div.text("Hello TA-20V!");
+				//$("#display-data").text("Hello TA-20V!")
+				
+				//$("#display-data").load("getDate.php");
+				$("#display-data").load("displayProducts.php");
+			});
+			
+			$("#hide-button").click(function(){
+				//$("#display-data").toggle();
+				$("#display-data").fadeToggle(500);
+			});
+		});
+	</script>
+	<style>
+		table,th,td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		Manufacturer:
+		<select id="select-manuf">
+			<option value="0"> </option>
+			<!--<option value="1">Intel</option>
+			<option></option>-->
+		</select>
+		Product type:
+		<select id="select-type">
+			<option value="0"> </option>
+		</select>
+		<button>Get info</button>
+	</div>
+	<div id="display-data"></div>
+	<button id="data-button">Click!</button>
+	<button id="hide-button">Hide</button>
+</body>

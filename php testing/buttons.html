@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Buttons</title>
+    <script>
+      function BtnClick(btn)
+      {
+          var div = document.getElementById("textBlock");
+          div.innerText = btn;
+
+          //document.getElementsByClassName('all-dives');
+          //document.getElementsByTagName('div');
+      }
+    </script>
+  </head>
+  <body>
+    <div id="textBlock" class="all-divs"></div>
+    <div class="all-dives">
+      <button onclick="BtnClick ('1')">1</button>
+      <button onclick="BtnClick ('2')">2</button>
+      <button onclick="BtnClick ('3')">3</button>
+      <button onclick="BtnClick ('4')">4</button>
+      <button onclick="BtnClick ('s')">5</button>
+    </div>
+  </body>
+</html>
